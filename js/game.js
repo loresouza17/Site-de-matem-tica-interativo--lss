@@ -11,6 +11,7 @@ function iniciarJogo(modo) {
   document.getElementById("area-jogo").style.display = "block";
   novaPergunta();
 
+}
 
 // Função que gera nova pergunta e mostra na tela
 function novaPergunta() {
@@ -27,6 +28,7 @@ document.getElementById("pergunta").innerText = perguntaTexto;
 document.getElementById("resposta").value = "";
 document.getElementById("resultado").innerText = "";
 
+}
 
 // Gera números aleatórios, maiores no modo desafio
 function gerarNumeros (modo) {
@@ -39,17 +41,19 @@ if (modo === 'desafio')
   num1 *= 2;
   num2 *= 3;
 
+}
 
 return { num1, num2 };
+
 }
 
 
 // Escolhe aleatoriamente uma operação: +, - ou *
 function escolherOperacao() {
-}
   const operacoes = ['+', '-', '*'];
   return operacoes [Math.floor(Math.random() * operacoes.length)];
 
+}
 
 // Calcula o resultado com base nos números e operação
 function calcularResposta (n1, n2, op) {
@@ -58,7 +62,7 @@ function calcularResposta (n1, n2, op) {
     case '-': return n1 - n2;
 121
     case '*': return n1 * n2;
-}
+ }
 }
 
 
